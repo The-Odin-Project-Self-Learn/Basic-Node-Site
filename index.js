@@ -4,7 +4,7 @@ var fs = require('fs');
 
 //we want to return the page corresponding to the URL request made by the client
 http.createServer(function(req, res){
-    var q = url.parse(req.url, true); //obtain the specific page requested by the client
+    var q = url.parse(req.url, true); 
     var filename = "." + q.pathname + ".html"; //if q.pathname = "/about", filename = "./about.html"
     if (q.pathname == '/') {
         filename = './index.html';
@@ -26,3 +26,4 @@ http.createServer(function(req, res){
         }
     });
 }).listen(8080);
+
